@@ -9,9 +9,7 @@ const userSchema = new Schema({
       type: Buffer, 
   
     },
-    email: {
-        type: String, required: true
-    },
+   
     contentType:{
         type:String,
         required:true

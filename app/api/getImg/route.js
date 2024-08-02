@@ -5,12 +5,8 @@ import { NextResponse } from "next/server";
 export const GET = async (request) => {
   try {
     await connectDB();
-    const userEmail = request.headers.get('x-user-email');
-    if (!userEmail) {
-      return NextResponse.json({ response: "Email header not found", success: false }, { status: 400 });
-    }
     
-    const photo = await Photo.findOne({ email: userEmail }).sort({ createdAt: -1 });
+    const photo = await Photo.findOne().sort({ createdAt: -1 });
 
     if (!photo) {
       return NextResponse.json({ response: "No images found", success: false }, { status: 404 });

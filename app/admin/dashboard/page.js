@@ -11,7 +11,7 @@ import { storePhoto } from '@/action/signUpAction'
 
 
 
-const dashboard = () => {
+const Dashboard = () => {
   const { data: session } = useSession()
   const router = useRouter()
   const [showProfile, setshowProfile] = useState(true)
@@ -412,4 +412,4 @@ const dashboard = () => {
   )
 }
 
-export default dashboard
+export default Dashboard

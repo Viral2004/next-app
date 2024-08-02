@@ -6,7 +6,7 @@ const connectDB = async () => {
     return;
   }
   try {
-    await mongoose.connect(`mongodb://localhost:27017/SignUp`, {
+    await mongoose.connect(process.env.MONGODB_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });

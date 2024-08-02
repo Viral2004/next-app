@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+/* styles.css */
+
+@keyframes slide {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.red-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background-color: red;
+    animation: slide 1s forwards;
+}
+.custom-toast{
+    background: green;
+}

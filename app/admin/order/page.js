@@ -43,7 +43,7 @@ const Order = () => {
       <div className="order w-full overflow-auto pb-3 bg-slate-300 h-screen">
         <div className="card vochar bg-blue-900 w-full flex flex-col sm:flex-row justify-between items-center text-white p-3">
           <div className="vochar p-4 sm:p-9 flex flex-col gap-4">
-            <h3 className='font-bold text-lg sm:text-2xl w-full'>India's Fastest Food Delivery In Minutes</h3>
+            <h3 className='font-bold text-lg sm:text-2xl w-full'>Indias Fastest Food Delivery In Minutes</h3>
           </div>
           <div className="img">
             <img className='w-20 sm:w-28 rounded-full' src="/delivery.jpg" alt="Delivery" />

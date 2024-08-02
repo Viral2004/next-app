@@ -82,7 +82,8 @@ const Dashboard = () => {
 
       const response = await fetch('/api/getImg', {
         headers: {
-          'x-user-email': session.user.email,
+          
+          method: 'GET',
         },});
       const blob = await response.blob();
 

@@ -1,20 +1,16 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const connectDB = async () => {
-  if (mongoose.connections[0].readyState) {
-    console.log("Already connected");
-    return;
-  }
-  try {
-    await mongoose.connect(process.env.MONGODB_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-    console.log("Connected to MongoDB");
-  } catch (error) {
-    console.error("Error connecting to MongoDB", error);
-    throw new Error("Error connecting to MongoDB");
-  }
+    try {
+        await mongoose.connect('mongodb+srv://viralmistry240:UUzuYoBMyLCNdQCJ@jayparmatma.udhaxfx.mongodb.net/JayParmatma?retryWrites=true&w=majority', {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        });
+        console.log('MongoDB connected');
+    } catch (error) {
+        console.error('Error connecting to MongoDB', error);
+        throw new Error('Error connecting to MongoDB');
+    }
 };
 
 export default connectDB;

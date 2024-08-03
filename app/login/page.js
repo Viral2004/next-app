@@ -24,7 +24,7 @@ const Page = () => {
   }
 
   const handleSubmit = async (event) => {
-    // event.preventDefault()
+    event.preventDefault()
    //now sign session work
    await signIn('credentials', { email: Login.email, password: Login.password })
   }

@@ -43,7 +43,7 @@ const Page = () => {
             </div>
 
             <div className="form">
-              <form action={handleSubmit} className="flex flex-col gap-5">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                 <div className="">
                   <input
                     value={Login.email ? Login.email : ''}

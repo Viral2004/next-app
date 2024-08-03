@@ -76,22 +76,21 @@ const Dashboard = () => {
   }
  
   const fetchProfilePhoto = async() => {
-      try {
-      const response = await fetch(`/api/getImg?timestamp=${new Date().getTime()}`, {
-        headers: {},
-      });
+    try{
+
+      const response = await fetch('/api/getImg');
       const blob = await response.blob();
 
       if (blob.type.startsWith('image/') && blob.size > 0) {
         const url = URL.createObjectURL(blob);
         setProfilePic(url);
       } else {
+        // Blob is not a valid image or it's empty, set profilePic to null
         setProfilePic(null);
       }
-    } catch(error) {
+    }catch(error){
       setProfilePic(null)
     }
-
 
      
 

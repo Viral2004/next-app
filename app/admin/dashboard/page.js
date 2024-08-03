@@ -26,11 +26,12 @@ const Dashboard = () => {
   useEffect(() => {
     if(session){
       getdata()
-      fetchProfilePhoto()
+    
     }
   if(!session){
     router.push('/login')
   }
+      fetchProfilePhoto()
    
   }, [router,session])
   
